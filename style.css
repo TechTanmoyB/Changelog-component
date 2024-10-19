@@ -1,0 +1,136 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #1f2325;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.changelog-container {
+    background-color: #1f2325;
+    border-radius: 10px;
+    border: 2px solid burlywood;
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    color: burlywood;
+}
+
+.changelog-title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.changelog-description {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline-entry {
+    position: relative;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(27, 225, 70, 0.583);
+    border-radius: 50%;
+    position: absolute;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+}
+
+.entry-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.entry-date {
+    font-weight: bold;
+    font-size: 18px;
+    padding: 20px;
+    width: 40%;
+    border-right: 5px solid burlywood;
+}
+
+.entry-description {
+    color: #cacdd3;
+    font-size: 18px;
+    width: 60%;
+    padding-left: 60px;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .timeline-entry {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .entry-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .entry-date {
+        width: 100%;
+        border-right: none;
+        border-bottom: 5px solid burlywood;
+        padding-bottom: 10px;
+    }
+
+    .entry-description {
+        width: 100%;
+        padding-left: 0;
+        padding-top: 10px;
+    }
+
+    .dot {
+        left: 50%;
+    }
+}
+
+@media (max-width: 640px) {
+    .changelog-title {
+        font-size: 20px;
+    }
+
+    .changelog-description {
+        font-size: 14px;
+    }
+
+    .entry-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .entry-date {
+        font-size: 16px;
+        border-right: none;
+        border-bottom: 3px solid burlywood;
+        padding-bottom: 10px;
+    }
+
+    .entry-description {
+        font-size: 16px;
+        padding-left: 0;
+        padding-top: 10px;
+    }
+
+    .dot {
+        left: 50%;
+        top: -10px;
+    }
+}
